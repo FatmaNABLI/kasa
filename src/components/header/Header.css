@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+}
+.img-log{
+    width: 210px;
+    height: 68px;
+}
+ul{
+    display: flex;
+    align-self: baseline;
+}
+ul li{
+    list-style-type: none;
+    padding-left: 80px;
+}
+a{
+    color: red;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}
+a.active{
+    text-decoration: underline;
+}

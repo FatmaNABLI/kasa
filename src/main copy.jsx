@@ -5,9 +5,7 @@ import APropos from './pages/aPropos/APropos.jsx';
 import './index.css'
 import {
   createBrowserRouter,
-  BrowserRouter as Router,
-  Route,
-  Routes
+  RouterProvider
 } from "react-router-dom";
 import Header from './components/header/Header.jsx';
 import Footer from './components/footer/Footer.jsx';
@@ -32,16 +30,10 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/apropos" element={<APropos />} />
-        <Route path="/*" element={<Error />} />
-      </Routes>
-      <Footer />
-    </Router>
-  </React.StrictMode>
+  <>
+   <Header/>
+    <RouterProvider router={router} />
+    <Footer/>
+  </>
  
 )
