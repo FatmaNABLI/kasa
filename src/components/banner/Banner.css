@@ -1,0 +1,16 @@
+.div-banner{
+    padding: 80px;
+    margin: 100px 0px 50px 0px;
+    /*background-image: url("/src/assets/img-banner.png");*/
+    background-position: center;
+     background-blend-mode: darken;
+    height: 223px;
+    border-radius: 25px;
+    text-align: center;
+
+}
+.div-banner h1{
+    font-weight: 500;
+    font-size: 48px;
+    color: #fff;
+}

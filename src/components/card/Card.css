@@ -1,0 +1,17 @@
+.card{
+    color: #fff;
+    width: 340px;
+    height: 340px;
+    background: linear-gradient(0deg, rgba(80,79,96,1) 0%, rgba(197,90,96,1) 14%, rgba(255,96,96,1) 21%);
+    border-radius: 10px;
+    display: flex;
+    align-items: baseline;
+    padding: 20px;
+    margin-bottom: 30px;
+
+}
+.card h2{
+    font-size: 18px ;
+    font-weight: 500;
+    align-self: flex-end;
+}

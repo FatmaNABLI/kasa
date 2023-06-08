@@ -1,7 +1,18 @@
+import Banner from '../../components/banner/banner'
+import Collapse from '../../components/collapse/Collapse'
+import './APropos.css'
+import image from '../../assets/banner-a-propos.png'
+import {collapseList} from '../../datas/collapseList'
 function APropos(){
     return(
         <div>
-            <h1>A Propos</h1>
+            <Banner image={image} text=''/>
+            {collapseList.map((collapse)=>(
+                <Collapse key={`collapse-${collapse.id}`} titre={collapse.titre} description={collapse.description} />            
+                ))   
+            }
+            
+
         </div>
     )
 }
