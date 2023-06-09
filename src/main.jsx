@@ -12,6 +12,7 @@ import {
 import Header from './components/header/Header.jsx';
 import Footer from './components/footer/Footer.jsx';
 import Error from './pages/error/Error.jsx';
+import Logement from './pages/logement/Logement.jsx';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="/apropos" element={<APropos />} />
         <Route path="/*" element={<Error />} />
+        <Route path="/logement/:idLogement" element ={<Logement/>} />
       </Routes>
       <Footer />
     </Router>
