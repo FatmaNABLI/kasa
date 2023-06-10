@@ -11,12 +11,41 @@ function Logement(){
     if (!logement) {
      return (<Error/>);
     }
+    const equipments = <ul>{logement.equipments.map((equipement,i)=>
+        <li key={`equipment-${i}`}>{equipement}</li>)}</ul>
+    let tabStars=[1,2,3,4,5]
     return (
+
         <div>
-            <h1>{logement.title}</h1>
             <Carrousel pictures={logement.pictures}/>
+
+            <div className="log-infos">
+                <div>
+                <h1 id="log-title">{logement.title}</h1>
+                <span id="log-location">{logement.location}</span>
+                </div>
+                <div className="log-host">
+                    <span>{logement.host.name}</span>
+                    <img id="img-host" src={logement.host.picture} alt="" />
+                </div>
+            </div>
+            <div id="tags-stars">
+                <div id="tags">
+                    {logement.tags.map(tag => <span className='tag'>{tag}</span>)}
+                </div>
+                <div id="stars">
+                {tabStars.map((index) =>(
+                 (index <= logement.rating)? <i key={`star-${index}`} className="fa-solid fa-star red-star"></i>:<i key={`star-${index}`} className="fa-solid fa-star gray-star"></i>
+                    )
+                )}
+                </div>
+                
+            </div>
+
+           
             <div className="details-logement">
-            <Collapse titre="description" description={logement.description}/>
+                <Collapse titre="Description" description={logement.description} type="small-collapse" />
+                <Collapse titre="Equipements" description={equipments} type="small-collapse" />
             </div>
            
         </div>

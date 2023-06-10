@@ -1,4 +1,54 @@
 .details-logement{
     margin-top: 50px;
     display: flex;
+    justify-content: space-between;
+}
+.gray-star{
+    color: #E3E3E3;
+}
+.red-star, #log-title, #log-location, .log-host span{
+    color: #FF6060;
+}
+
+.log-infos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+#log-title{
+    font-size: 36px;
+    font-weight: 500;
+}
+.log-host span, #log-location{
+    font-size:18px;
+    font-weight: 500;
+}
+.log-host span{
+    display: inline-block;
+    width: 100px;
+    margin-right:10px;
+    text-align: right;
+}
+#log-location{
+    
+    margin-top: 30px;
+}
+#img-host{
+    width: 64px;
+    height: 64px;
+    border-radius:50%;
+}
+.tag{
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 20px 5px 20px;
+    margin-right: 15px;
+}
+#tags-stars{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }

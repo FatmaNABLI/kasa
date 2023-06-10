@@ -9,12 +9,14 @@ header{
     width: 210px;
     height: 68px;
 }
-ul{
+nav ul{
     display: flex;
     align-self: baseline;
 }
 ul li{
     list-style-type: none;
+}
+nav ul li{
     padding-left: 80px;
 }
 a{

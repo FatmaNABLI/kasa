@@ -8,7 +8,7 @@ function APropos(){
         <div>
             <Banner image={image} text=''/>
             {collapseList.map((collapse)=>(
-                <Collapse key={`collapse-${collapse.id}`} titre={collapse.titre} description={collapse.description} />            
+                <Collapse key={`collapse-${collapse.id}`} titre={collapse.titre} description={collapse.description} type="big-collapse" />            
                 ))   
             }
             
