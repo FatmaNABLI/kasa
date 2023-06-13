@@ -30,10 +30,10 @@ function Carrousel(props){
     }
     return(
         <div id="slider">
-            <i className="fa-solid fa-chevron-right slider-arrow arrow-right" onClick={next}></i>
-            <i className="fa-solid fa-chevron-left slider-arrow arrow-left" onClick={prev}></i>
+            {pictures.length>1 && <i className="fa-solid fa-chevron-right slider-arrow arrow-right" onClick={next}></i>}
+            {pictures.length>1 && <i className="fa-solid fa-chevron-left slider-arrow arrow-left" onClick={prev}></i>}
             <div className="slide" style={{ backgroundImage: `url(${pictures[currentIndex]})` }}>
-                <p>{`${currentIndex+1}/${pictures.length}`}</p>
+                {pictures.length>1 && <p>{`${currentIndex+1}/${pictures.length}`}</p>}
             </div>
         </div>
     )

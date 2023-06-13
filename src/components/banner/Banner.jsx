@@ -4,9 +4,12 @@ function Banner(props){
     const {image,texte} = props
     //const pathImg = "src/assets/img-banner.png"
     return(
-        <div className="div-banner" style={{backgroundImage :`url(${image})` }}>
-            <h1>{texte}</h1>
-        </div>
+        <div className="div-banner">
+              <div className="div-banner-bg" style={{backgroundImage :`url(${image})` }}>
+              </div>
+              <h1>{texte}</h1>
+        </div> 
+      
     )
 }
 export default Banner

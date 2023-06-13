@@ -1,16 +1,37 @@
 .div-banner{
     padding: 80px;
     margin: 100px 0px 50px 0px;
-    /*background-image: url("/src/assets/img-banner.png");*/
+    display: flex;
     background-position: center;
-     background-blend-mode: darken;
     height: 223px;
-    border-radius: 25px;
     text-align: center;
+    position: relative;
+
+}
+.div-banner-bg{
+    position :absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    filter: brightness(85%);
+    background-position: center;
+    border-radius: 25px;
 
 }
 .div-banner h1{
     font-weight: 500;
     font-size: 48px;
     color: #fff;
+    align-self: center;
+    z-index: 2;
+}
+/**********************************
+*          Responsive             *
+**********************************/
+@media screen and (max-width: 767px) {
+    .div-banner h1{
+        font-weight: 500;
+        font-size: 24px;
+    }
 }

@@ -5,7 +5,7 @@ header{
     padding: 0px;
     align-items: center;
 }
-.img-log{
+.img-logo{
     width: 210px;
     height: 68px;
 }
@@ -20,11 +20,30 @@ nav ul li{
     padding-left: 80px;
 }
 a{
+    text-decoration: none;
+}
+nav a{
     color: red;
     font-size: 24px;
     font-weight: 500;
-    text-decoration: none;
+    
 }
-a.active{
+nav a.active{
     text-decoration: underline;
+}
+/**********************************
+*          Responsive             *
+**********************************/
+@media screen and (max-width: 767px) {
+    .img-logo{
+        width: 145px;
+        height: 47px;
+    }
+    nav ul li{
+        padding-left: 20px;
+    }
+    nav a {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
 }

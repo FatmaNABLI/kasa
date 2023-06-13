@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import Carrousel from '../../components/carrousel/Carrousel'
 import './Logement.css'
 import {logementList} from '../../datas/logementList'
@@ -9,7 +9,8 @@ function Logement(){
     const {idLogement} = useParams()
     const logement = logementList.find(logement => logement.id==idLogement)
     if (!logement) {
-     return (<Error/>);
+        //<Navigate to="/*" replace={true} />
+        return (<Error/>);
     }
     const equipments = <ul>{logement.equipments.map((equipement,i)=>
         <li key={`equipment-${i}`}>{equipement}</li>)}</ul>
