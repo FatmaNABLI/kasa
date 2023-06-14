@@ -19,9 +19,18 @@
     font-size: 36px;
     font-weight: 500;
 }
+#log-host-stars{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .log-host span, #log-location{
     font-size:18px;
     font-weight: 500;
+}
+.log-host{
+    display: flex;
 }
 .log-host span{
     display: inline-block;
@@ -30,8 +39,10 @@
     text-align: right;
 }
 #log-location{
-    
     margin-top: 30px;
+}
+#stars{
+    margin-top: 20px;
 }
 #img-host{
     width: 64px;
@@ -47,8 +58,46 @@
     padding: 5px 20px 5px 20px;
     margin-right: 15px;
 }
-#tags-stars{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+#tags{
+    margin-top: 20px;
+}
+/**********************************
+*          Responsive             *
+**********************************/
+@media screen and (max-width: 375px) {
+
+    .log-infos{
+        flex-direction:column;
+    }
+    #log-title{
+        font-size: 18px;
+    }
+    #log-location{
+        font-size: 14px;
+    }
+    .tag{
+        font-size: 10px;
+    }
+    #log-host-stars{
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #stars{
+        margin-top: 0px;
+    }
+    #img-host{
+        width: 32px;
+        height: 32px;
+    }
+    .details-logement{
+        display: block;
+        margin-top: 30px;
+        margin: auto;
+    }
+    .details-logement >*{
+       width: 90%;
+    }
 }

@@ -19,31 +19,28 @@ function Logement(){
 
         <div>
             <Carrousel pictures={logement.pictures}/>
-
             <div className="log-infos">
                 <div>
-                <h1 id="log-title">{logement.title}</h1>
-                <span id="log-location">{logement.location}</span>
+                    <h1 id="log-title">{logement.title}</h1>
+                    <span id="log-location">{logement.location}</span>
+                    <div id="tags">
+                        {logement.tags.map((tag,i) => <span key={`tag-${i}`}className='tag'>{tag}</span>)}
+                    </div>
                 </div>
-                <div className="log-host">
-                    <span>{logement.host.name}</span>
-                    <img id="img-host" src={logement.host.picture} alt="" />
+                <div id="log-host-stars">
+                    <div className="log-host">
+                        <span>{logement.host.name}</span>
+                        <img id="img-host" src={logement.host.picture} alt="" />
+                    </div>
+                    <div id="stars">
+                        {tabStars.map((index) =>(
+                            (index <= logement.rating)? <i key={`star-${index}`} className="fa-solid fa-star red-star"></i>:<i key={`star-${index}`} className="fa-solid fa-star gray-star"></i>
+                            )
+                        )}
+                    </div>
                 </div>
-            </div>
-            <div id="tags-stars">
-                <div id="tags">
-                    {logement.tags.map((tag,i) => <span key={`tag-${i}`}className='tag'>{tag}</span>)}
-                </div>
-                <div id="stars">
-                {tabStars.map((index) =>(
-                 (index <= logement.rating)? <i key={`star-${index}`} className="fa-solid fa-star red-star"></i>:<i key={`star-${index}`} className="fa-solid fa-star gray-star"></i>
-                    )
-                )}
-                </div>
-                
             </div>
 
-           
             <div className="details-logement">
                 <Collapse titre="Description" description={logement.description} type="small-collapse" />
                 <Collapse titre="Equipements" description={equipments} type="small-collapse" />
