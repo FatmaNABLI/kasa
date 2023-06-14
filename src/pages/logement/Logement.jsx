@@ -32,7 +32,7 @@ function Logement(){
             </div>
             <div id="tags-stars">
                 <div id="tags">
-                    {logement.tags.map(tag => <span className='tag'>{tag}</span>)}
+                    {logement.tags.map((tag,i) => <span key={`tag-${i}`}className='tag'>{tag}</span>)}
                 </div>
                 <div id="stars">
                 {tabStars.map((index) =>(

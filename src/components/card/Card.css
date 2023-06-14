@@ -31,5 +31,8 @@
     .card-link{
         width: 95%;
     }
+    .card{
+        height: 255px;
+    }
  
 }
