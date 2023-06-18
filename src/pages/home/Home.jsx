@@ -10,7 +10,7 @@ function Home() {
         <Banner  image={image} texte='Chez vous, partout et ailleurs'/>
         <section className='div-cartes'>
           {logementList.map(logement => (
-            <Card key={logement.id} id={logement.id} title={logement.title}/>
+            <Card key={logement.id} id={logement.id} title={logement.title} imgCover={logement.cover}/>
           ))}
         </section>
     </main>
