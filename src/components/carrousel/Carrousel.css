@@ -27,7 +27,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
-    font-size: 80px;
+    font-size: 70px;
     margin-right: 40px;
     margin-left: 25px;
     cursor: pointer;
@@ -48,6 +48,15 @@
 /**********************************
 *          Responsive             *
 **********************************/
+
+@media screen and (max-width: 768px) {
+    .slider-arrow{
+        font-size: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+}
 @media screen and (max-width: 375px) {
     #numerotation{
         display: none;
