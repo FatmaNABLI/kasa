@@ -4,7 +4,7 @@ import './Header.css'
 function Header(){
     return(
         <header>
-            <img className ="img-logo" src={logo} alt="logo kasa" />
+            <NavLink to="/"><img className ="img-logo" src={logo} alt="logo kasa" /></NavLink>
             <nav>
                 <ul>
                     <li><NavLink to="/">Accueil</NavLink></li>
