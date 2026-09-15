@@ -13,7 +13,7 @@ import Logement from './pages/logement/Logement.jsx';
 
 function MyRouter(){
     return(
-            <Router>
+            <Router basename="/kasa">
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
