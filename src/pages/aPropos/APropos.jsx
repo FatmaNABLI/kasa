@@ -1,4 +1,4 @@
-import Banner from '../../components/banner/banner'
+import Banner from '../../components/banner/Banner'
 import Collapse from '../../components/collapse/Collapse'
 import './APropos.css'
 import image from '../../assets/banner-a-propos.png'
